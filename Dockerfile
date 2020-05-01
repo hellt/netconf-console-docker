@@ -41,4 +41,6 @@ COPY --from=builder /usr/lib/libgpg* /usr/lib/
 COPY --from=builder /usr/local/lib/python3.7/site-packages/ /usr/local/lib/python3.7/site-packages/
 COPY --from=builder /usr/local/bin/netconf-console /usr/local/bin/netconf-console
 
+WORKDIR /rpc
+
 ENTRYPOINT [ "netconf-console" ]
