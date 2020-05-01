@@ -27,8 +27,9 @@ LABEL maintainer="dodin.roman@gmail.com" \
     org.label-schema.vendor="Roman Dodin" \
     org.label-schema.docker.cmd="docker run --rm -it hellt/netconf-console --help"
 
-RUN apk --no-cache add \
-    python3 &&\
+RUN apk add --no-cache \
+    python3 \
+    openssh && \
     # cleanup
     find /usr/lib/ -name '__pycache__' -print0 | xargs -0 -n1 rm -rf && \
     find /usr/lib/ -name '*.pyc' -print0 | xargs -0 -n1 rm -rf
