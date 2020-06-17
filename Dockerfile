@@ -8,6 +8,7 @@ RUN apk --no-cache add \
     ncurses-dev \
     libxml2-dev \
     libxslt-dev \
+    git \
     bash && \
     # netconf-console installation
     pip3 install git+https://bitbucket.org/martin_volf/ncc/@2.3.0 && \
