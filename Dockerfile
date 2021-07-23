@@ -9,7 +9,9 @@ RUN apk --no-cache add \
     libxml2-dev \
     libxslt-dev \
     git \
-    bash && \
+    bash \
+    cargo \
+    rust && \
     # netconf-console installation
     pip3 install git+https://bitbucket.org/martin_volf/ncc/@2.3.0 && \
     find /usr/lib/ -name '__pycache__' -print0 | xargs -0 -n1 rm -rf && \
